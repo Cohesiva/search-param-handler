@@ -1,6 +1,8 @@
 # Search Param Handler
 
-search-param-handler is angularjs service for handling url search params.
+SearchParamHandler is angularjs service for handling url search params.
+
+It allows to use callback function after each change of a controlled search param in url and restricting its value to those provided by developer.
 
 ## Install
 
@@ -74,7 +76,7 @@ angular.module('yourApp')
 
 ```
 
-You can change controlled search param value both by changing it's value in url and by using the method provided by SearchParamHandler:
+You can change controlled search param value both by changing its value in url and by using the method provided by SearchParamHandler:
 
 ```javascript
 searchParamHandler.setSearchParam(value);
