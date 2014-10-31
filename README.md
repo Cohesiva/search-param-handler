@@ -39,14 +39,14 @@ angular.module('yourApp', [
 
 ```
 
-Inject SearchParamHandler service, in ex. to controller:
+Inject SearchParamHandler service, for ex. to controller:
 
 ```javascript
 angular.module('yourApp')
     .controller('YourAppCtrl', ['$scope', 'SearchParamHandler',
         function($scope, SearchParamHandler) {
 
-            /* Controller body */
+            /* Controller's body */
 
         }]);
 
@@ -61,7 +61,7 @@ angular.module('yourApp')
 
             var searchParamHandlerParams = {
                 scope: $scope, // current controller's scope must be provided for angular to set $watch service
-                name: 'exampleSearchParam', // the name of serch param displayed in url
+                name: 'exampleSearchParam', // the name of search param displayed in url
                 allowedValues: [true], // the array of allowed values
                 callback: function(newExampleSearchParamValue) {
                     /* callback function is fired after every change of the exampleSearchParam value */
@@ -82,10 +82,14 @@ searchParamHandler.setSearchParam(value);
 
 The service is checking if the provided value is specified in searchParamHandlerParams.allowedValues property. If it's not, the last value of search param will be restored.
 
-If you run:
+If you call:
 
 ```javascript
 searchParamHandler.setSearchParam(null);
 ```
 
 the search param will be removed from the url.
+
+## License
+
+Licensed under the terms of the [Apache License](https://github.com/Cohesiva/search-param-handler/blob/master/LICENSE)
